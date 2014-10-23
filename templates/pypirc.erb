@@ -1,0 +1,17 @@
+[global]
+index-servers =
+<% @pypi_repos.each do |title, data| -%>
+  <%= title %>
+<% end -%>
+
+<% @pypi_repos.each do |title, values| -%>
+[<%= title %>]
+repository: <%= values['repository'] %>
+<% if values['username'] -%>
+username: <%= values['username'] %>
+<% end -%>
+<% if values['password'] -%>
+password: <%= values['password'] %>
+<% end -%>
+
+<% end -%>

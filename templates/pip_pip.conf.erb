@@ -1,0 +1,8 @@
+<% @pip_config.each do |section, entries| -%>
+[<%= section %>]
+
+<% entries.each do |title, value| -%>
+<%= title %> = <%= value %>
+<% end -%>
+
+<% end -%>

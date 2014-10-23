@@ -1,0 +1,10 @@
+<% @pydistutils_config.each do |section, entries| -%>
+[<%= section %>]
+
+<% if entries -%>
+<% entries.each do |title, value| -%>
+<%= title %> = <%= value %>
+<% end -%>
+<% end -%>
+
+<% end -%>
